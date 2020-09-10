@@ -49,6 +49,10 @@ class Account extends Model {
       await transaction.commit();
     }
     catch (e) {
+      if (e.message.includes('accounts_balance_check')) {
+        log.info(`INSUFFICIENT_FUNDS.ACCOUNT:${from}`);
+        throw new UnprocessableEntity('INSUFFICIENT_FUNDS');
+      }
       log.warn(`TRANSFER_ERROR:${e.message}`);
       await transaction.rollback();
       throw new UnprocessableEntity('COULD_NOT_PROCESS_TRANSFER'); // Не можем выполнить
