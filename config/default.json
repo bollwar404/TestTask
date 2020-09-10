@@ -1,0 +1,21 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": "3000",
+    "shutdownTimeout": 60000
+  },
+  "logger": {
+    "level": "debug"
+  },
+  "db": {
+    "postgres": {
+      "host": "0.0.0.0",
+      "port": 5432,
+      "db": "testTask",
+      "username": "postgres",
+      "password": "password",
+      "dialect": "postgres",
+      "logging": false
+    }
+  }
+}

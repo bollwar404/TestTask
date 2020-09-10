@@ -1,0 +1,31 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint server",
+    "demon": "nodemon index.js"
+  },
+  "author": "Pavel Vlasov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "config": "3.3.1",
+    "express": "4.17.1",
+    "express-async-errors": "3.1.1",
+    "http-errors": "1.8.0",
+    "pg": "8.3.3",
+    "pg-hstore": "2.3.3",
+    "sequelize": "6.3.5",
+    "winston": "3.3.3",
+    "yargs": "16.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
