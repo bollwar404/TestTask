@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 docker run -d --name postgres -v my_dbdata:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
 
