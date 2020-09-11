@@ -19,6 +19,8 @@ async function get(req, res, next) {
   if (!account) {
     throw new NotFound(`NO_ACCOUNT_BY_${accountId}`); // Аккаунта нет - 404
   }
+
+  console.log(account.toJSON());
   const {balance} = account;
   res.result = {balance}; // Все ок, стандартное 200
   next();

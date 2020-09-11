@@ -4,7 +4,7 @@ docker run -d --name postgres -v my_dbdata:/var/lib/postgresql/data -p 5432:5432
 
 PGPASSWORD=password docker exec -it postgres psql -U postgres -c "create database testTask"
 
-GPASSWORD=password docker exec -it postgres psql -U postgres -c "
+PGPASSWORD=password docker exec -it postgres psql -U postgres -c "
 CREATE TABLE accounts
 (
 account_id bigserial PRIMARY KEY,
